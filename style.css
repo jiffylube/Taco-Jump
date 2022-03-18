@@ -1,0 +1,31 @@
+* {
+  margin: 2px;
+  padding: 2px;
+  border: 1px solid red;
+}
+.wrapper {
+  height: 400px;
+  width: 500px;
+  overflow: hidden;
+}
+.sliding-background {
+  background: url(/img/SeekPng.com_building-png_133022.png) repeat-x;
+  background-position: bottom;
+  height: 400px;
+  width: 5000px;
+  animation: slide 30s linear infinite;
+  opacity: 50%;
+}
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1692px, 0, 0);
+  }
+}
+.bird {
+  width: 20px;
+  height: 20px;
+  background-color: greenyellow;
+}
