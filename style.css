@@ -1,17 +1,37 @@
 * {
   /* border: 1px solid red; */
 }
-.wrapper {
-  height: 420px;
-  border: 1px solid black;
+.game {
+  height: 500px;
+  border: 1px solid red;
+  background-color: black;
   width: 600px;
   overflow: hidden;
-  /* background-color: white; */
 }
+.bird {
+  z-index: 1;
+  width: 20px;
+  height: 40px;
+  background-color: greenyellow;
+  position: relative;
+  top: 400px;
+  left: 50px;
+}
+.cactus {
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  position: relative;
+  top: 380px;
+  left: 580px;
+}
+
 .sliding-background {
   background: url(/img/SeekPng.com_building-png_133022.png) repeat-x;
+  background-color: grey;
   background-position: bottom;
-  height: 400px;
+  height: 380px;
   width: 5000px;
   animation: slide 30s linear infinite;
 }
@@ -22,12 +42,4 @@
   100% {
     transform: translate3d(-1692px, 0, 0);
   }
-}
-.bird {
-  z-index: 1;
-  width: 20px;
-  height: 40px;
-  background-color: greenyellow;
-  position: absolute;
-  top: 370px;
 }
