@@ -37,5 +37,14 @@ document.addEventListener('keypress', spaceBar)
 
 let checkOverlap = setInterval(function () {
   let birdTop =
-  parseInt(window.getComputedStyle(bird).getPropertyValue("top"));
+    parseInt(document.getComputedStyle(bird).getPropertyValue("top"));
+  let cactusLeft =
+    parseInt(document.getComputedStyle(cactus).getPropertyValue('left'));
+  // .bird has property of position   
+  // width: 20px;
+  // top: 400px;
+  // top: 340px;   when jump animation is added
+  if (cactusLeft< 40 && cactusLeft> 20 && birdTop >= 340) {
+    alert('gameOver')
+  }
 }, 10);
