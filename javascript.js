@@ -1,0 +1,1 @@
+let bird = document.querySelector('.bird')

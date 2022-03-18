@@ -1,12 +1,12 @@
 * {
-  margin: 2px;
-  padding: 2px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .wrapper {
-  height: 400px;
-  width: 500px;
+  height: 420px;
+  border: 1px solid black;
+  width: 600px;
   overflow: hidden;
+  /* background-color: white; */
 }
 .sliding-background {
   background: url(/img/SeekPng.com_building-png_133022.png) repeat-x;
@@ -14,7 +14,6 @@
   height: 400px;
   width: 5000px;
   animation: slide 30s linear infinite;
-  opacity: 50%;
 }
 @keyframes slide {
   0% {
@@ -25,7 +24,10 @@
   }
 }
 .bird {
+  z-index: 1;
   width: 20px;
-  height: 20px;
+  height: 40px;
   background-color: greenyellow;
+  position: absolute;
+  top: 370px;
 }
