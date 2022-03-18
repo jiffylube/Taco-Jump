@@ -1,14 +1,14 @@
 let bird = document.querySelector('.bird')
-let cactus = document.querySelectorAll('.cactus')
+let cactus = document.querySelector('.cactus')
 
 //make the bird jump
 let jump = function () {
   if (bird.classList != 'jump') {
     bird.classList.add('jump');
-  }
     setTimeout(() => {
       bird.classList.remove('jump');
     }, 500);
+  }
 }
 
 let spaceBar = function (e) {
@@ -37,14 +37,16 @@ document.addEventListener('keypress', spaceBar)
 
 let checkOverlap = setInterval(function () {
   let birdTop =
-    parseInt(document.getComputedStyle(bird).getPropertyValue("top"));
+    parseInt(window.getComputedStyle(bird).getPropertyValue("top"));
   let cactusLeft =
-    parseInt(document.getComputedStyle(cactus).getPropertyValue('left'));
+    parseInt(window.getComputedStyle(cactus).getPropertyValue('left'));
   // .bird has property of position   
   // width: 20px;
   // top: 400px;
   // top: 340px;   when jump animation is added
-  if (cactusLeft< 40 && cactusLeft> 20 && birdTop >= 340) {
+  if (cactusLeft< 70 && cactusLeft> 50 && birdTop >= 380) {
+    cactus.style.animation = "none"
     alert('gameOver')
+    cactus.style.animation = "block 1s infinite linear";
   }
 }, 10);

@@ -3,10 +3,11 @@
 } */
 .game {
   height: 500px;
+  width: 600px;
   border: 1px solid red;
   background-color: black;
-  width: 600px;
   overflow: hidden;
+  margin: auto;
 }
 .bird {
   z-index: 1;
@@ -25,7 +26,7 @@
   position: relative;
   top: 380px;
   left: 580px;
-  animation: cactus 5s linear infinite;
+  animation: cactus 1s linear infinite;
 }
 
 /* Slide Cactus across screen */
@@ -40,7 +41,7 @@
 
 /* Created jump function , will call on JS */
 .jump {
-  animation: jump 500ms;
+  animation: jump 500ms linear;
 }
 
 @keyframes jump {
