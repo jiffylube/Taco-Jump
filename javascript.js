@@ -1,16 +1,18 @@
 let bird = document.querySelector('.bird')
+let cactus = document.querySelectorAll('.cactus')
 
-let singleJump = 45;
-
+//make the bird jump
 let jump = function () {
-  singleJump += 50;
-  bird.style.bottom = singleJump + 'px';
+  bird.classList.add('jump');
+  setTimeout(() => {
+    bird.classList.remove('jump');
+  }, 500);
 }
-  
-  let spaceBar = function (e) {
-    if (e.keyCode === 32) {
-      jump()
-    }
+
+let spaceBar = function (e) {
+  if (e.keyCode === 32) {
+    jump()
   }
-  
+}
+
 document.addEventListener('keypress', spaceBar)

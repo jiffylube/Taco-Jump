@@ -1,6 +1,6 @@
-* {
-  /* border: 1px solid red; */
-}
+/* * {
+  border: 1px solid red;
+} */
 .game {
   height: 500px;
   border: 1px solid red;
@@ -25,8 +25,40 @@
   position: relative;
   top: 380px;
   left: 580px;
+  animation: cactus 5s linear infinite;
 }
 
+/* Slide Cactus across screen */
+@keyframes cactus {
+  0% {
+    left: 580px;
+  }
+  100% {
+    left: -40px;
+  }
+}
+
+/* Created jump function , will call on JS */
+.jump {
+  animation: jump 500ms;
+}
+
+@keyframes jump {
+  0% {
+    top: 400px;
+  }
+  30% {
+    top: 340px;
+  }
+  70% {
+    top: 340px;
+  }
+  100% {
+    top: 400px;
+  }
+}
+
+/* ETC Background stuff */
 .sliding-background {
   background: url(/img/SeekPng.com_building-png_133022.png) repeat-x;
   background-color: grey;
