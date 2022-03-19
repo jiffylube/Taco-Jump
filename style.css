@@ -61,7 +61,7 @@
 
 /* ETC Background stuff */
 .sliding-background {
-  background: url("/img/SeekPng.com_building-png_133022.png") repeat-x;
+  background: url("./img/SeekPng.com_building-png_133022.png") repeat-x;
   background-color: grey;
   background-position: bottom;
   height: 380px;
