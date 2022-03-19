@@ -45,8 +45,8 @@ let checkOverlap = setInterval(function () {
   // top: 400px;
   // top: 340px;   when jump animation is added
   if (cactusLeft< 70 && cactusLeft> 50 && birdTop >= 380) {
-    cactus.style.animation = "none"
+    // cactus.style.animation = "none"
     alert('gameOver')
-    cactus.style.animation = "block 1s infinite linear";
+    // cactus.style.animation = "block 1s infinite linear";
   }
 }, 10);
