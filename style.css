@@ -26,6 +26,9 @@
   position: relative;
   top: 380px;
   left: 580px;
+}
+
+.slideActive {
   animation: cactus 1s linear infinite;
 }
 
@@ -75,4 +78,16 @@
   100% {
     transform: translate3d(-1692px, 0, 0);
   }
+}
+
+#score{
+  height: auto;
+  width: auto;
+  color: white;
+  position: absolute;
+  top: 20px;
+}
+#gameOver{
+  color: white;
+  font-size: 25px;
 }

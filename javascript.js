@@ -1,5 +1,19 @@
 let bird = document.querySelector('.bird')
 let cactus = document.querySelector('.cactus')
+let score = document.querySelector('#score')
+let gameOver = document.querySelector('#gameOver')
+
+//score 
+let playerScore = 0;
+let gameStarting = null;
+
+let scoreCounter = ()=> {
+  playerScore+= 10;
+  score.innerHTML = `Score <b>${playerScore}</b>`;
+}
+
+gameStarting = setInterval (scoreCounter,200)
+
 
 //make the bird jump
 let jump = function () {
@@ -37,16 +51,21 @@ document.addEventListener('keypress', spaceBar)
 
 let checkOverlap = setInterval(function () {
   let birdTop =
-    parseInt(window.getComputedStyle(bird).getPropertyValue("top"));
+    parseInt(getComputedStyle(bird).getPropertyValue("top"));
+    console.log("birdTop" + birdTop)
+
   let cactusLeft =
-    parseInt(window.getComputedStyle(cactus).getPropertyValue('left'));
+    parseInt(getComputedStyle(cactus).getPropertyValue('left'));
+    console.log("cactusLeft" + cactusLeft)
+
   // .bird has property of position   
   // width: 20px;
   // top: 400px;
   // top: 340px;   when jump animation is added
+
   if (cactusLeft< 70 && cactusLeft> 50 && birdTop >= 380) {
-    // cactus.style.animation = "none"
-    alert('gameOver')
-    // cactus.style.animation = "block 1s infinite linear";
+    cactus.style.animation = "none"
+    console.log('gameOver')
+    cactus.style.animation = "block 1s infinite linear";
   }
 }, 10);
