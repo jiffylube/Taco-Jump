@@ -12,7 +12,19 @@ let scoreCounter = ()=> {
   score.innerHTML = `Score <b>${playerScore}</b>`;
 }
 
-gameStarting = setInterval (scoreCounter,200)
+// gameStarting = setInterval (scoreCounter,200)
+
+window.addEventListener("keypress", (e) => {
+  //    console.log(start);
+  if (e.code == "Space") {
+    gameOver.style.display = "none";
+    cactus.classList.add("slideActive");
+    
+    //score
+    let playerScore = 0;
+    gameStarting = setInterval (scoreCounter, 500)
+  }
+});
 
 
 //make the bird jump
@@ -64,8 +76,9 @@ let checkOverlap = setInterval(function () {
   // top: 340px;   when jump animation is added
 
   if (cactusLeft< 70 && cactusLeft> 50 && birdTop >= 380) {
-    cactus.style.animation = "none"
-    console.log('gameOver')
-    cactus.style.animation = "block 1s infinite linear";
+    gameOver.style.display = "block"
+    cactus.classList.remove("slideActive");
+    clearInterval(gameStarting);
+    playerScore = 0;
   }
 }, 10);
