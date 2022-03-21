@@ -71,15 +71,15 @@ font-family: 'Indie Flower', cursive;
   background-color: rgb(17, 17, 17);
   background-position: bottom;
   height: 380px;
-  width: 5076px;
+  width: 2560px;
   animation: slide 30s linear infinite;
 }
 @keyframes slide {
   0% {
-    transform: translate3d(0, 0, 0);
+    transform: translate(0, 0, 0);
   }
   100% {
-    transform: translate3d(-1692px, 0, 0);
+    transform: translate3d(-1280px, 0, 0);
   }
 }
 #highScore{
