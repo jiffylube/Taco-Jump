@@ -1,3 +1,7 @@
+*{
+color: white;
+font-family: 'Indie Flower', cursive;
+}
 .game {
   height: 500px;
   width: 600px;
@@ -10,16 +14,17 @@
   z-index: 1;
   width: 20px;
   height: 40px;
-  background-color: greenyellow;
+  /* background-color: greenyellow; */
   position: relative;
   top: 400px;
   left: 50px;
+  transform: rotateY(180deg)
 }
 .cactus {
   z-index: 1;
   width: 20px;
   height: 20px;
-  background-color: red;
+  /* background-color: red; */
   position: relative;
   top: 380px;
   left: 600px;
@@ -27,7 +32,7 @@
 
 /* Slide Cactus across screen */
 .slideActive {
-  animation: cactus 1s linear infinite;
+  animation: cactus 2s linear infinite;
 }
 
 @keyframes cactus {
@@ -57,12 +62,13 @@
   100% {
     top: 400px;
   }
+  
 }
 
 /* ETC Background stuff */
 .sliding-background {
   background: url("./img/SeekPng.com_building-png_133022.png") repeat-x;
-  background-color: grey;
+  background-color: rgb(17, 17, 17);
   background-position: bottom;
   height: 380px;
   width: 5076px;
@@ -79,19 +85,23 @@
 #highScore{
   height: auto;
   width: auto;
-  color: white;
   position: absolute;
   top: 20px;
 }
 #score{
   height: auto;
   width: auto;
-  color: white;
   position: absolute;
   top: 40px;
 }
+p1{
+  height: auto;
+  width: auto;
+  top: 10px;
+  right: 600px;
+  position: absolute;
+}
 #gameOver{
   display: none;
-  color: white;
   font-size: 25px;
 }
