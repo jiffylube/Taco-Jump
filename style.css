@@ -1,6 +1,3 @@
-/* * {
-  border: 1px solid red;
-} */
 .game {
   height: 500px;
   width: 600px;
@@ -28,11 +25,11 @@
   left: 600px;
 }
 
+/* Slide Cactus across screen */
 .slideActive {
   animation: cactus 1s linear infinite;
 }
 
-/* Slide Cactus across screen */
 @keyframes cactus {
   0% {
     left: 580px;
@@ -68,7 +65,7 @@
   background-color: grey;
   background-position: bottom;
   height: 380px;
-  width: 5000px;
+  width: 5076px;
   animation: slide 30s linear infinite;
 }
 @keyframes slide {
@@ -79,15 +76,22 @@
     transform: translate3d(-1692px, 0, 0);
   }
 }
-
-#score{
+#highScore{
   height: auto;
   width: auto;
   color: white;
   position: absolute;
   top: 20px;
 }
+#score{
+  height: auto;
+  width: auto;
+  color: white;
+  position: absolute;
+  top: 40px;
+}
 #gameOver{
+  display: none;
   color: white;
   font-size: 25px;
 }
