@@ -76,7 +76,7 @@ font-family: 'Indie Flower', cursive;
 }
 @keyframes slide {
   0% {
-    transform: translate(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
   100% {
     transform: translate3d(-1280px, 0, 0);
@@ -94,11 +94,18 @@ font-family: 'Indie Flower', cursive;
   position: absolute;
   top: 40px;
 }
-p1{
+#p1{
   height: auto;
   width: auto;
-  top: 10px;
-  right: 600px;
+  top: 5px;
+  right: 45%;
+  position: absolute;
+}
+#p2{
+  height: auto;
+  width: auto;
+  top: 30px;
+  right: 45%;
   position: absolute;
 }
 #gameOver{
