@@ -1,5 +1,7 @@
-# Project 4 - Taco Jump
-Based off Google's t-rex Jump Game
+# Taco Jump
+Based off Google's t-rex Jump Game!  
+
+![Capture](https://user-images.githubusercontent.com/16528442/168201345-25fe5f56-ddf2-40e0-a464-aee576a45020.PNG)
 
 # Instructions
 Use Space Bar to Jump.
